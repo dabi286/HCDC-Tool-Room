@@ -22,7 +22,7 @@ namespace Tool_Room_System
         private void Borrow_Tools_Reports_Load(object sender, EventArgs e)
         {
             //PASS ALL DATA REPORTS WHERE RETURN_DATE != '' OR RETURN_DATE = ''
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
 
             //FUNCTION FROM DATABASE
@@ -54,7 +54,7 @@ namespace Tool_Room_System
             {
                 //SEARCH for Borrow
                 //ADDING CATCH EXCEPTION ON CONVERTING INT TO NVARCHAR
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("SEARCH_BARROW_TOOLS_REPORT", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -95,7 +95,7 @@ namespace Tool_Room_System
             try
             {
                 //SEARCH FOR RETURN
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("SEARCH_RETURN_TOOLS_REPORT", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -130,7 +130,7 @@ namespace Tool_Room_System
         {
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM F_GET_ISSUE_DATE_REPORT()", connect);
@@ -147,7 +147,7 @@ namespace Tool_Room_System
 
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd2 = new SqlCommand("SELECT * FROM F_GET_RETURN_DATE_REPORT()", connect);

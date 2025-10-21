@@ -27,7 +27,7 @@ namespace Tool_Room_System
         //LOAD
         private void Return_Tools_Load(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
 
             SqlCommand cmd = new SqlCommand("SP_LOAD_DATA_RETURN_TOOLS", connect);
@@ -73,7 +73,7 @@ namespace Tool_Room_System
             }
             else
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd = new SqlCommand("UPDATE_ISSUETOOL", connect);
@@ -106,7 +106,7 @@ namespace Tool_Room_System
         {
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd = new SqlCommand("SP_VIEWISSUEBOOK", connect);
@@ -155,7 +155,7 @@ namespace Tool_Room_System
         {
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd = new SqlCommand("SP_LOAD_DATA_RETURN_TOOLS", connect);

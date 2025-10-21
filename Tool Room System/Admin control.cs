@@ -37,7 +37,7 @@ namespace Tool_Room_System
             }
             try
             {
-                using (SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
+                using (SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("SP_REGISTER_USERS", connect))
                     {
@@ -64,7 +64,7 @@ namespace Tool_Room_System
 
         private void Admin_control_Load(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
 
             SqlCommand cmd = new SqlCommand("SP_STATUS_TABLE", connect);
@@ -96,7 +96,7 @@ namespace Tool_Room_System
             }
             else
             {
-                using (SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
+                using (SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
                 {
                     connect.Open();
 
@@ -139,7 +139,7 @@ namespace Tool_Room_System
             }
             try
             {
-                using (SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
+                using (SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("SP_ADMIN_REGISTER", connect))
                     {
@@ -182,7 +182,7 @@ namespace Tool_Room_System
 
         private void ExecuteCode()
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
             SqlCommand cmd = new SqlCommand("SP_SEARCH_STATUS", connect);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -213,7 +213,7 @@ namespace Tool_Room_System
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
 
             SqlCommand cmd = new SqlCommand("SP_STATUS_TABLE", connect);
@@ -228,7 +228,7 @@ namespace Tool_Room_System
 
         private void RefreshBtnAU_Click(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
 
             SqlCommand cmd2 = new SqlCommand("VIEW_USERS", connect);
@@ -250,7 +250,7 @@ namespace Tool_Room_System
             }
             else
             {
-                using (SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
+                using (SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
                 {
                     connect.Open();
 

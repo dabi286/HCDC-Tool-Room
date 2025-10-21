@@ -25,7 +25,7 @@ namespace Tool_Room_System
 
         private void LogButton_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
+            using (SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True"))
             {
                 connect.Open();
                 if (textBox1.Text == "" || LoginTextBox.Text == "")

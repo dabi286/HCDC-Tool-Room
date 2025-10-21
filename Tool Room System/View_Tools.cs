@@ -22,7 +22,7 @@ namespace Tool_Room_System
 
         private void View_Tools_Load(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
 
             SqlCommand cmd = new SqlCommand("SP_REFRESH_VIEW_TOOL", connect);
@@ -54,7 +54,7 @@ namespace Tool_Room_System
 
         private void ExecuteCode()
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
             SqlCommand cmd = new SqlCommand("VIEW_TOOLS", connect);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -70,7 +70,7 @@ namespace Tool_Room_System
         {
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd = new SqlCommand("SP_REFRESH_VIEW_TOOL", connect);

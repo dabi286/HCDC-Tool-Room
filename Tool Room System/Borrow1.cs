@@ -23,7 +23,7 @@ namespace Tool_Room_System
         {
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 int userID = Dashboard.RetUserID();
@@ -107,7 +107,7 @@ namespace Tool_Room_System
                 //ADDING CATCH EXCEPTION ON CONVERTING INT TO NVARCHAR
                 try
                     {
-                    SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                    SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                     connect.Open();
                     SqlCommand cmd = new SqlCommand();
                     string querySelectData = "SELECT * FROM STUDENT where Students_ID ='" + textBox1.Text + "'; ";
@@ -154,7 +154,7 @@ namespace Tool_Room_System
         //QR SANNER IN TOOLS IMPLEMENTED ON DATABASE
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
             SqlCommand cmd = new SqlCommand();
             string querySelectData = "SELECT i.*, s.* FROM ITEM i, STOCK s  WHERE Status != 'NOT AVAILABLE' AND Quantity != 0 AND i.Items_ID = s.Items_ID AND i.Device_Barcode ='" + textBox12.Text + "'; ";
@@ -195,7 +195,7 @@ namespace Tool_Room_System
         //LOADED GRID
         private void Borrow1_Load(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+            SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
             connect.Open();
             SqlCommand cmd = new SqlCommand("VIEW_TOOLS", connect);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -214,7 +214,7 @@ namespace Tool_Room_System
             //ADDING CATCH EXCEPTION ON CONVERTING INT TO NVARCHAR
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=LAPTOP-P93JFCQB\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
+                SqlConnection connect = new SqlConnection("Data Source=DAVE\\SQLEXPRESS;Initial Catalog=CET_TOOLROOM;Integrated Security=True");
                 connect.Open();
 
                 SqlCommand cmd = new SqlCommand("SP_REFRESH_BORROW_CS", connect);

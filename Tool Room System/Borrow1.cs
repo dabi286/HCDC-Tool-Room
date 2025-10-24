@@ -174,7 +174,7 @@ namespace Tool_Room_System
                 textBox10.Text = reader["Storage_Room"].ToString();
                 textBox11.Text = reader["Serial_Number"].ToString();
                 textBox3.Text = reader["Items_ID"].ToString();
-                textBox15.Text = reader["Period_of_Return"].ToString();
+                //textBox15.Text = reader["Period_of_Return"].ToString();
                 textBox12.SelectAll();
             }
 

@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ExitBtn = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +42,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ExitBtn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +93,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(110, 178);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 35);
+            this.label1.Size = new System.Drawing.Size(173, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tool Room Login";
             // 
@@ -107,6 +108,18 @@
             this.panel1.Size = new System.Drawing.Size(368, 42);
             this.panel1.TabIndex = 9;
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitBtn.AutoSize = true;
+            this.ExitBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(342, 13);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(18, 20);
+            this.ExitBtn.TabIndex = 14;
+            this.ExitBtn.Text = "X";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -115,7 +128,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(676, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 22);
+            this.label5.Size = new System.Drawing.Size(17, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -126,7 +139,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(40, 247);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 22);
+            this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 10;
             this.label3.Text = "Username:";
             // 
@@ -136,7 +149,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(44, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.Size = new System.Drawing.Size(74, 18);
             this.label4.TabIndex = 11;
             this.label4.Text = "Password:";
             // 
@@ -146,7 +159,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(145, 497);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 18);
+            this.label6.Size = new System.Drawing.Size(74, 14);
             this.label6.TabIndex = 14;
             this.label6.Text = "Admin Login";
             // 
@@ -169,7 +182,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.checkBox1.Location = new System.Drawing.Point(209, 382);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(128, 20);
+            this.checkBox1.Size = new System.Drawing.Size(105, 17);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Show Password:";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -178,7 +191,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::Tool_Room_System.Properties.Resources.hcdc_logo1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(91, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 100);
@@ -186,21 +199,9 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // ExitBtn
-            // 
-            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitBtn.AutoSize = true;
-            this.ExitBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.Location = new System.Drawing.Point(342, 13);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(21, 24);
-            this.ExitBtn.TabIndex = 14;
-            this.ExitBtn.Text = "X";
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
